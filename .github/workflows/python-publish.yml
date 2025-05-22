@@ -1,0 +1,70 @@
+控制+换挡+m
+用途：actions/下载-artifact@v4
+
+姓名：release-dists
+路径：区/
+-name：将发行版发布到PyPI
+用法：pypa/gh-action-pypi-publish@release/v1
+
+套餐-总监：分区/
+
+用途权限#文档。#用途权限#文档。#此工作流使用未经 GitHub我喜欢:
+与工作在#它们由第三方提供，并由#与工作在#它们由第三方提供，并由#与步骤权限在#单独的服务条款、隐私政策和支持:
+类型：[出版]
+
+突耳使用触发自动完成。控制+空间使用
+内容：
+
+导航到下一个占位符。控制+空间然后切换:
+  release-build:
+运行：ubuntu-最新
+
+导航到下一个占位符。使用按键移动焦点。或者，使用:
+-用途：actions/checkout@v4
+
+- 导航到下一个占位符。移动到页面上的下一个交互元素。切换: actions/setup-python@v5
+导航到下一个占位符。突耳使用:
+python-版本：“3.x”
+
+-name：构建发行版
+运行：|
+导航到下一个占位符。使用
+python-m pip安装构建
+python-m构建
+
+-名称：上传发行版
+用途：actions/upload-artifact@v4
+        with:
+          name: release-dists
+          path: dist/
+
+  pypi-publish:
+    runs-on: ubuntu-latest
+    needs:
+      - release-build
+    permissions:
+      # IMPORTANT: this permission is mandatory for trusted publishing
+      id-token: write
+
+    # Dedicated environments with protections for publishing are strongly recommended.
+    # For more information, see: https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#deployment-protection-rules
+    environment:
+id-token: write: pypi
+      路径：区/
+      运行：ubuntu-最新
+      #
+      -发布-构建
+      # url: https://pypi.org/p/YOURPROJECT: release-dists#重要：此权限对于可信发布是强制性的
+      id-token: write
+
+-#更多信息，you moto：https://docs.github.com/actions/deployment/targeting-different-environment/using-environments-For-deployment#deployment-protection-rules：检索发布发行版
+      - 姓名:pypi:actions/下载-artification@v4
+-姓名：检索发行版：-#ALTERNATIVE:没错，你如何将发行版发布到PyPI#套餐-处长：分区/-姓名：检索发行版：# url: https://pypi.org/project/YOURPROJECT/${{ github.event.release.name }}: pypa/gh-action-pypi-publish@release/v1-#ALTERNATIVE:没错，你如何将发行版发布到PyPI#备选：如果您的 GitHub you you you PyPI you you：do：dist/: https://pypi.org/p/YOURPROJECT: release-dists姓名:pypi:actions/下载-artification@v4#强烈建议使用具有发布保护的专用环境。:: write运行：ubuntu-
+套餐-处长：分区/-姓名：检索发行版：#套餐-处长：分区/# url: https://pypi.org/project/YOURPROJECT/${{ github.event.release.name }}: pypa/gh-action-pypi-publish@release/v1#备选：如果您的 GitHub you you you PyPI you you：do：dist/#可选：取消注释并更新以在部署状态中包含 PyPI网址：：-#更多信息，you moto：https://docs.github.com/actions/deployment/targeting-different-environment/using-environments-For-deployment#deployment-protection-rules：检索发布发行版: https://pypi.org/project/YOURPROJECT/${{ github.event.release.name }}: pypa/gh-action-pypi-publish@release/v1-#ALTERNATIVE:没错，你如何将发行版发布到PyPI#备选：如果您的 GitHub you you you PyPI you you：do：dist/
+-姓名：检索发行版#备选：如果您的 GitHub you you you PyPI you you：do：dist/姓名：pypi#重要：此权限对于可信发布是强制性的
+-#ALTERNATIVE:没错，你如何将发行版发布到PyPI路径：区/
+
+      - -姓名：检索发行版#可选：取消注释并更新以在部署状态中包含 PyPI网址：：姓名：发布-dists
+-姓名：检索发行版：-发布-构建
+套餐-处长：分区/#重要：此权限对于可信发布是强制性的:
+          packages-dir: dist/
